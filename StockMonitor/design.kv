@@ -1,0 +1,488 @@
+#:kivy 2.1.0
+RelativeLayout:
+    background_color: (0, .75, 0, 1)
+    canvas.before:
+        Color:
+            rgba: self.background_color
+        Rectangle
+            size: self.size
+<tabContent>
+    RelativeLayout:
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            BoxLayout:
+                size_hint_x:1
+                size_hint_y: None
+                height: self.minimum_height
+                orientation: 'vertical'
+                
+
+                BoxLayout:
+                    size_hint_y: None
+                    height: 40
+                GridLayout:
+                    spacing: 5
+                    size_hint_x:.85
+                    pos_hint: {'center_x': .5}
+                    size_hint_y: None
+                    orientation: 'tb-lr'
+                    height: 300
+                    #pos_hint: {'top': 1}
+                    cols: 2
+
+                    canvas.before:
+                        Color:
+                            rgba: 0, .60, 0, 1
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+                    BoxLayout:
+                        canvas.before:
+                            Color:
+                                rgba: 0, .0, 0, 1
+                            Rectangle:
+                                pos: self.pos
+                                size: self.size
+                        
+                        Label:
+                            size_hint_y: None
+                            size_hint_x: 1
+                            font_size: 16
+                            height: self.texture_size[1]
+                            text_size: self.size
+                            text: "Symbol"
+                            halign: 'center'
+                            
+                            
+                        
+                        Label:
+                            size_hint_x: 1
+                            font_size: 16
+                            id: symbol
+                            height: self.texture_size[1]
+                            text_size: self.size
+                            text: "placeholder"
+                            halign: 'left'
+
+                    BoxLayout:
+                        canvas.before:
+                            Color:
+                                rgba: 0, 0, 0, 1
+                            Rectangle:
+                                pos: self.pos
+                                size: self.size
+                        Label:
+                            size_hint_y: None
+                            size_hint_x: 1
+                            font_size: 16
+                            height: self.texture_size[1]
+                            text_size: self.size
+                            text: "Company Name"
+                            halign: 'center'
+                        
+                        Label:
+                            size_hint_y: None
+                            size_hint_x: 1
+                            font_size: 16
+                            id: comname
+                            height: self.texture_size[1]
+                            text_size: self.size
+                            text: "placeholder"
+                            halign: 'left'
+
+                    BoxLayout:
+                        canvas.before:
+                            Color:
+                                rgba: 0, 0, 0, 1
+                            Rectangle:
+                                pos: self.pos
+                                size: self.size
+                        Label:
+                            size_hint_x: 1
+                            font_size: 16
+                            height: self.texture_size[1]
+                            text_size: self.size
+                            text: "P/E Ratio"
+                            halign: 'center'
+                        
+                    
+                        Label:
+                            size_hint_x: 1
+                            font_size: 16
+                            id: pe
+                            height: self.texture_size[1]
+                            text_size: self.size
+                            text: "placeholder"
+                            halign: 'left'
+
+
+                    BoxLayout:
+                        canvas.before:
+                            Color:
+                                rgba: 0, 0, 0, 1
+                            Rectangle:
+                                pos: self.pos
+                                size: self.size
+                        Label:
+                            size_hint_x: 1
+                            font_size: 16
+                            height: self.texture_size[1]
+                            text_size: self.size
+                            text: "Forward P/E"
+                            halign: 'center'
+                        
+                        Label:
+                            size_hint_x: 1
+                            font_size: 16
+                            id: fpe
+                            height: self.texture_size[1]
+                            text_size: self.size
+                            text: "placeholder"
+                            halign: 'left'
+
+                    BoxLayout:
+                        canvas.before:
+                            Color:
+                                rgba: 0, 0, 0, 1
+                            Rectangle:
+                                pos: self.pos
+                                size: self.size
+                        Label:
+                            size_hint_x: 1
+                            font_size: 16
+                            height: self.texture_size[1]
+                            text_size: self.size
+                            text: "EPS"
+                            halign: 'center'
+                        
+                        Label:
+                            size_hint_x: 1
+                            font_size: 16
+                            id: eps
+                            height: self.texture_size[1]
+                            text_size: self.size
+                            text: "placeholder"
+                            halign: 'left'
+                    BoxLayout:
+                        canvas.before:
+                            Color:
+                                rgba: 0, 0, 0, 1
+                            Rectangle:
+                                pos: self.pos
+                                size: self.size
+                        Label:
+                            size_hint_x: 1
+                            font_size: 16
+                            height: self.texture_size[1]
+                            text_size: self.size
+                            text: "Next Dividend"
+                            halign: 'center'
+                        
+                        Label:
+                            size_hint_x: 1
+                            font_size: 16
+                            id: ndividend
+                            height: self.texture_size[1]
+                            text_size: self.size
+                            text: "placeholder"
+                            halign: 'left'
+                        
+                    BoxLayout:
+                        canvas.before:
+                            Color:
+                                rgba: 0, 0, 0, 1
+                            Rectangle:
+                                pos: self.pos
+                                size: self.size
+                        Label:
+                            size_hint_x: 1
+                            font_size: 16
+                            height: self.texture_size[1]
+                            text_size: self.size
+                            text: "Close"
+                            halign: 'center'
+                        
+                        Label:
+                            size_hint_x: 1
+                            font_size: 16
+                            id: close
+                            height: self.texture_size[1]
+                            text_size: self.size
+                            text: "placeholder"
+                            halign: 'left'
+
+                    BoxLayout:
+                        canvas.before:
+                            Color:
+                                rgba: 0, 0, 0, 1
+                            Rectangle:
+                                pos: self.pos
+                                size: self.size
+                        Label:
+                            size_hint_x: 1
+                            font_size: 16
+                            height: self.texture_size[1]
+                            text_size: self.size
+                            text: "Close change in time"
+                            halign: 'center'
+                        
+                        Label:
+                            size_hint_x: 1
+                            font_size: 16
+                            id: closerange
+                            height: self.texture_size[1]
+                            text_size: self.size
+                            text: "placeholder"
+                            halign: 'left'
+
+
+                    BoxLayout:
+                        canvas.before:
+                            Color:
+                                rgba: 0, 0, 0, 1
+                            Rectangle:
+                                pos: self.pos
+                                size: self.size
+                        Label:
+                            size_hint_x: 1
+                            font_size: 16
+                            height: self.texture_size[1]
+                            text_size: self.size
+                            text: "Market Capitalization"
+                            halign: 'center'
+                        
+                        Label:
+                            size_hint_x: 1
+                            font_size: 16
+                            id: marketcap
+                            height: self.texture_size[1]
+                            text_size: self.size
+                            text: "placeholder"
+                            halign: 'left'
+
+                    BoxLayout:
+                        canvas.before:
+                            Color:
+                                rgba: 0, 0, 0, 1
+                            Rectangle:
+                                pos: self.pos
+                                size: self.size
+                        Label:
+                            size_hint_x: 1
+                            font_size: 16
+                            height: self.texture_size[1]
+                            text_size: self.size
+                            text: "Volume"
+                            halign: 'center'
+                        
+                        Label:
+                            size_hint_x: 1
+                            font_size: 16
+                            id: volume
+                            height: self.texture_size[1]
+                            text_size: self.size
+                            text: "placeholder"
+                            halign: 'left'
+
+
+                GridLayout:
+                    size_hint_x:1
+                    size_hint_y: None
+                    height: self.minimum_height
+                    cols: 2
+                    RelativeLayout:
+                        size_hint:(1, None)
+                        height: 500
+                        BoxLayout:
+                            id: box
+                            size_hint: (.9, .9)
+                            pos_hint: {"center_x":.5, "top":.9}
+                    
+                    RelativeLayout:
+                        size_hint:(1, None)
+                        height: 500
+                        BoxLayout:
+                            id: box2
+                            size_hint: (.9, .9)
+                            pos_hint: {"center_x":.5, "top":.9}
+
+                    RelativeLayout:
+                        size_hint:(1, None)
+                        height: 500
+
+                        BoxLayout:
+                            id: box3
+                            size_hint: (.9, .9)
+                            pos_hint: {"center_x":.5, "top":.9}
+                    
+                    RelativeLayout:
+                        size_hint:(1, None)
+                        height: 500
+                        BoxLayout:
+                            id: box4
+                            size_hint: (.9, .9)
+                            pos_hint: {"center_x":.5, "top":.9}
+
+               
+
+            
+
+
+        
+
+<Lay>
+    on_kv_post: root.coo()
+    elevation: 0
+    
+    RelativeLayout:
+        id: targetlayout
+        pos_hint: {'center_y': .5, 'center_x': .5}
+        size_hint: (.98, 1)
+
+        TabbedPanel:
+            do_default_tab: False
+            pos_hint: {'center_x': .5, 'y': .01}
+            size_hint: (.85, .93)
+            elevation: 0
+            id: tabz
+            TabbedPanelItem:
+                on_kv_post: root.coo()
+                elevation: 0
+                text:"Searcher"
+                RelativeLayout:
+                    id:research
+                    pos_hint: {'center_x': .5, 'y': .02}
+                    size_hint: (1, 1)
+
+
+                    MDRaisedButton:
+                        text: "Add to saved"
+                        md_bg_color: "green"
+                        size_hint: (None, None)
+                        size: (250, 60)
+                        elevation: 0
+                        pos_hint: {'y': .01, 'center_x': .5}
+                        on_press:
+                            root.addToSaved(root.tab1)
+
+
+                    RelativeLayout:
+                        pos_hint: {'top': 1, 'right': 1}
+                        size_hint: (1, .12)
+                        CheckBox:
+                            group: "stonksfiles"
+                            pos_hint: {'center_y': .4, 'right': .3}
+                            size_hint: (None, None)
+                            on_active: root.stockFile = "SP500 Companies2.csv"
+                        Label:
+                            text: "S&P 500"
+                            pos_hint: {'center_y': .4, 'right': .335}
+                            size_hint: (None, None)
+
+                        CheckBox:
+                            group: "stonksfiles"
+                            pos_hint: {'center_y': .4, 'right': .38}
+                            size_hint: (None, None)
+                            on_active: root.stockFile = "US100.csv"
+                            
+                        Label:
+                            text: "US 100"
+                            pos_hint: {'center_y': .4, 'right': .415}
+                            size_hint: (None, None)
+                        CheckBox:
+                            group: "stonksfiles"
+                            active: True
+                            pos_hint: {'center_y': .4, 'right': .45}
+                            size_hint: (None, None)
+                            on_active: root.stockFile = "DJIA.csv"
+                        Label:
+                            text: "Dow Jones Industrial Average"
+                            pos_hint: {'center_y': .4, 'right': .54}
+                            size_hint: (None, None)
+                        Slider:
+                            id: sliderr
+                            min:1
+                            max:10
+                            step: 1
+                            pos_hint: {'center_y': .4, 'right': .83}
+                            size_hint: (.2, None)
+                            value: 4
+                        Label:
+                            id: slabel
+                            text: root.periods[root.ids.sliderr.value]
+                            pos_hint: {'center_y': .4, 'right': .88}
+                            size_hint: (None, None)
+                        MDRaisedButton:
+                            text: "Search"
+                            elevation: 0
+                            size_hint: (None, None)
+                            size: (65, 30)
+                            pos_hint: {'center_y': .4, 'right': .95}
+                            on_press:
+                                root.add_row1(root.tab1, root.stockFile, root.periods[root.ids.sliderr.value])
+                        
+
+
+                        
+
+            TabbedPanelItem:
+                elevation: 0
+                text:"Saved Stocks"
+                RelativeLayout:
+                    elevation: 0
+                    id:saved
+                    pos_hint: {'center_x': .5, 'y': .02}
+                    size_hint: (1, 1)
+
+
+                    MDRaisedButton:
+                        id: removestock
+                        text: "Remove from saved"
+                        md_bg_color:"red"
+                        size_hint: (None, None)
+                        elevation: 0
+                        size: (250, 60)
+                        pos_hint: {'y': .01, 'center_x': .5}
+                        on_press:
+                            root.removeFromSaved(root.tab2)
+
+                    RelativeLayout:
+                        pos_hint: {'top': 1, 'right': 1}
+                        size_hint: (1, .12)
+                        Slider:
+                            id: sliderr1
+                            min:1
+                            max:10
+                            step: 1
+                            pos_hint: {'center_y': .4, 'right': .78}
+                            size_hint: (.2, None)
+                            value: 4
+                        Label:
+                            id: slabel1
+                            text: root.periods[root.ids.sliderr1.value]
+                            pos_hint: {'center_y': .4, 'right': .83}
+                            size_hint: (None, None)
+                        
+                        
+                        MDRaisedButton:
+                            text: "Refresh"
+                            elevation: 0
+                            size_hint: (None, None)
+                            size: (65, 30)
+                            pos_hint: {'center_y': .4, 'right': .885}
+                            on_press:
+                                root.add_row1(root.tab2, root.savedFile, root.periods[root.ids.sliderr1.value])
+                        TextInput:
+                            size_hint: (None, None)
+                            size: (75, 30)
+                            pos_hint: {'center_y': .4, 'right': .98}
+                            multiline: False
+                            id: tickerinput
+
+                        MDIconButton:
+                            icon: "magnify"
+                            pos_hint: {'center_y': .4, 'right': .922}
+                            on_press:
+                                root.add_ticker()
