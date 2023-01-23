@@ -3,7 +3,7 @@ Program for finding monitoring and analyzing stocks... And my learning playgroun
 
 Program based on Pandas, Kivy, KivyMD Matplotlib and Yfinance.
 Program will work properly only with newest Yfinance package which probably force you to use Python 3.11+
-Program is still under development, For now it uses test/unstable cersion of kivy which affecting performance of program.
+Program is still under development, For now it uses test/unstable version of kivy which affecting performance of program and slowing it.
 
 Access to more detailed stock page is by doubleclick on stock in datatable
 
